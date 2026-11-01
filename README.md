@@ -41,23 +41,7 @@ Paste must be in the hopper for the planner to use it. Reward quantities mean wh
 
 You do all the clicking and moving. The plugin provides instructions and optional menu guards for the processing stations.
 
-Rates are estimates, and latency can still affect timing cues. Live-game timing and full-session validation are still outstanding. More on the planning model and its limits is in [the planner notes](docs/planner.md).
-
-## Installation
-
-The plugin hasn't been approved for the Plugin Hub yet. After approval, search for **Mixology AIO** in RuneLite's Plugin Hub.
-
-For local development with Java 11 or newer:
-
-```sh
-./gradlew run
-```
-
-To build and run the tests:
-
-```sh
-./gradlew clean build
-```
+Rates are estimates, and latency can still affect timing cues. More on the planning model and its limits is in [the planner notes](docs/planner.md).
 
 If something goes wrong, [open an issue](https://github.com/alex-md/MixologyAIO/issues) with your Herblore level, goal, and what happened. Include a screenshot if you can.
 

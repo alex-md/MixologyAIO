@@ -6,6 +6,15 @@ Use Java 11 or newer. To run a local development client:
 ./gradlew run
 ```
 
+On macOS, the `run` task includes the Apple desktop module exports needed by
+RuneLite on Java 17 and newer. If you launch `MixologyBatchPluginTest.main`
+directly from an IDE, enable assertions (`-ea`) and add these VM options:
+
+```text
+--add-exports=java.desktop/com.apple.eawt=ALL-UNNAMED
+--add-exports=java.desktop/com.apple.eio=ALL-UNNAMED
+```
+
 To build and run the tests:
 
 ```sh

@@ -42,4 +42,9 @@ tasks.register('run', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'com.mixologybatch.MixologyBatchPluginTest'
     enableAssertions = true
+    // Java 17+ encapsulates the Apple APIs used by RuneLite's macOS window adapter.
+    if (System.getProperty('os.name').toLowerCase(java.util.Locale.ROOT).contains('mac')) {
+        jvmArgs '--add-exports=java.desktop/com.apple.eawt=ALL-UNNAMED',
+                '--add-exports=java.desktop/com.apple.eio=ALL-UNNAMED'
+    }
 }
